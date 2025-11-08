@@ -26,9 +26,14 @@ pipeline {
                   //  archiveArtifacts 'target/*.jar'
                 //}
             }
-        stage('test'){
+        //stage('test'){
+          //  steps{
+            //    sh 'mvn test'
+            //}
+        //}
+        stage('Deploy'){
             steps{
-                sh 'mvn test'
+                sh 'scp /var/lib/jenkins/workspace/Demo-calci/target/*.jar ec2-user@13.232.211.5:/home/ec2-user/apache-tomcat-9.0.111/webapps'
             }
         }
     }
