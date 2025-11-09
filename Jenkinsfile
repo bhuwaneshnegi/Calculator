@@ -34,7 +34,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 sh 'whoami'
-                sh 'scp /var/lib/jenkins/workspace/Demo-calci/target/*.jar ec2-user@13.232.211.5:/home/ec2-user/apache-tomcat-9.0.111/webapps'
+                sh 'scp /var/lib/jenkins/workspace/Demo-calci/target/*.jar ec2-user@13.201.73.60:/home/ec2-user/apache-tomcat-9.0.111/webapps'
             }
         }
     }
